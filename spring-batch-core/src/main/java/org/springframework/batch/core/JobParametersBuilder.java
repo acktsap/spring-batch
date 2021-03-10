@@ -16,6 +16,7 @@
 
 package org.springframework.batch.core;
 
+import java.time.Instant;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -145,6 +146,31 @@ public class JobParametersBuilder {
 	 * @return a reference to this object.
 	 */
 	public JobParametersBuilder addDate(String key, Date parameter, boolean identifying) {
+		this.parameterMap.put(key, new JobParameter(parameter, identifying));
+		return this;
+	}
+
+	/**
+	 * Add a new identifying {@link Instant} parameter for the given key.
+	 *
+	 * @param key - parameter accessor.
+	 * @param parameter - runtime parameter
+	 * @return a reference to this object.
+	 */
+	public JobParametersBuilder addInstant(String key, Instant parameter) {
+		this.parameterMap.put(key, new JobParameter(parameter, true));
+		return this;
+	}
+
+	/**
+	 * Add a new {@link Instant} parameter for the given key.
+	 *
+	 * @param key - parameter accessor.
+	 * @param parameter - runtime parameter
+	 * @param identifying - indicates if the parameter is used as part of identifying a job instance
+	 * @return a reference to this object.
+	 */
+	public JobParametersBuilder addInstant(String key, Instant parameter, boolean identifying) {
 		this.parameterMap.put(key, new JobParameter(parameter, identifying));
 		return this;
 	}

@@ -17,6 +17,7 @@
 package org.springframework.batch.core;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -219,6 +220,37 @@ public class JobParameters implements Serializable {
 	public Date getDate(String key, @Nullable Date defaultValue){
 		if(parameters.containsKey(key)){
 			return (Date)parameters.get(key).getValue();
+		}
+		else{
+			return defaultValue;
+		}
+	}
+
+	/**
+	 * Typesafe Getter for the Instant represented by the provided key.
+	 *
+	 * @param key The key to get a value for
+	 * @return The <code>java.util.Date</code> value or {@code null} if the key
+	 * is absent
+	 */
+	@Nullable
+	public Instant getInstant(String key){
+		return this.getInstant(key,null);
+	}
+
+	/**
+	 * Typesafe Getter for the Instant represented by the provided key.  If the
+	 * key does not exist, the default value will be returned.
+	 *
+	 * @param key to return the value for
+	 * @param defaultValue to return if the value doesn't exist
+	 * @return the parameter represented by the provided key, defaultValue
+	 * otherwise.
+	 */
+	@Nullable
+	public Instant getInstant(String key, @Nullable Instant defaultValue){
+		if(parameters.containsKey(key)){
+			return (Instant)parameters.get(key).getValue();
 		}
 		else{
 			return defaultValue;

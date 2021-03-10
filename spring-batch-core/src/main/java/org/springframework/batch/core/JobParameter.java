@@ -17,6 +17,7 @@
 package org.springframework.batch.core;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.Date;
 
 /**
@@ -28,6 +29,7 @@ import java.util.Date;
  * @author Lucas Ward
  * @author Dave Syer
  * @author Michael Minella
+ * @author Taeik Lim
  * @since 2.0
  *
  */
@@ -76,6 +78,18 @@ public class JobParameter implements Serializable {
 	}
 
 	/**
+	 * Construct a new JobParameter as an Instant.
+	 *
+	 * @param parameter {@link Instant} instance.
+	 * @param identifying true if JobParameter should be identifying.
+	 */
+	public JobParameter(Instant parameter, boolean identifying) {
+		this.parameter = parameter;
+		parameterType = ParameterType.INSTANT;
+		this.identifying = identifying;
+	}
+
+	/**
 	 * Construct a new JobParameter as a Double.
 	 *
 	 * @param parameter {@link Double} instance.
@@ -118,6 +132,17 @@ public class JobParameter implements Serializable {
 	public JobParameter(Date parameter) {
 		this.parameter = parameter;
 		parameterType = ParameterType.DATE;
+		this.identifying = true;
+	}
+
+	/**
+	 * Construct a new JobParameter as an Instant.
+	 *
+	 * @param parameter {@link Instant} instance.
+	 */
+	public JobParameter(Instant parameter) {
+		this.parameter = parameter;
+		parameterType = ParameterType.INSTANT;
 		this.identifying = true;
 	}
 
@@ -172,8 +197,19 @@ public class JobParameter implements Serializable {
 
 	@Override
 	public String toString() {
-		return parameter == null ? null : (parameterType == ParameterType.DATE ? "" + ((Date) parameter).getTime()
-				: parameter.toString());
+		if (parameter == null) {
+			return null;
+		}
+
+		if (parameterType == ParameterType.DATE) {
+			return String.valueOf(((Date)parameter).getTime());
+		}
+
+		if (parameterType == ParameterType.INSTANT) {
+			return String.valueOf(((Instant)parameter).getEpochSecond());
+		}
+
+		return parameter.toString();
 	}
 
 	@Override
@@ -186,6 +222,6 @@ public class JobParameter implements Serializable {
 	 */
 	public enum ParameterType {
 
-		STRING, DATE, LONG, DOUBLE;
+		STRING, DATE, INSTANT, LONG, DOUBLE;
 	}
 }

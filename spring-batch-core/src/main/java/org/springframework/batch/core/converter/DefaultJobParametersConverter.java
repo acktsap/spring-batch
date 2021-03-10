@@ -66,6 +66,8 @@ public class DefaultJobParametersConverter implements JobParametersConverter {
 
 	public static final String DATE_TYPE = "(date)";
 
+	public static final String INSTANT_TYPE = "(instant)";
+
 	public static final String STRING_TYPE = "(string)";
 
 	public static final String LONG_TYPE = "(long)";
