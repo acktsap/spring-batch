@@ -41,6 +41,7 @@ import java.util.Set;
  * @author Dave Syer
  * @author Michael Minella
  * @author Mahmoud Ben Hassine
+ * @author Taeik Lim
  * @since 2.2
  */
 public abstract class StepBuilderHelper<B extends StepBuilderHelper<B>> {
@@ -116,27 +117,20 @@ public abstract class StepBuilderHelper<B extends StepBuilderHelper<B>> {
 		return properties.allowStartIfComplete != null ? properties.allowStartIfComplete : false;
 	}
 
-	protected void enhance(Step target) {
+	protected void enhance(AbstractStep step) {
+		step.setJobRepository(properties.getJobRepository());
 
-		if (target instanceof AbstractStep) {
-
-			AbstractStep step = (AbstractStep) target;
-			step.setJobRepository(properties.getJobRepository());
-
-			Boolean allowStartIfComplete = properties.allowStartIfComplete;
-			if (allowStartIfComplete != null) {
-				step.setAllowStartIfComplete(allowStartIfComplete);
-			}
-
-			step.setStartLimit(properties.startLimit);
-
-			List<StepExecutionListener> listeners = properties.stepExecutionListeners;
-			if (!listeners.isEmpty()) {
-				step.setStepExecutionListeners(listeners.toArray(new StepExecutionListener[0]));
-			}
-
+		Boolean allowStartIfComplete = properties.allowStartIfComplete;
+		if (allowStartIfComplete != null) {
+			step.setAllowStartIfComplete(allowStartIfComplete);
 		}
 
+		step.setStartLimit(properties.startLimit);
+
+		List<StepExecutionListener> listeners = properties.stepExecutionListeners;
+		if (!listeners.isEmpty()) {
+			step.setStepExecutionListeners(listeners.toArray(new StepExecutionListener[0]));
+		}
 	}
 
 	public static class CommonStepProperties {
