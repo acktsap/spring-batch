@@ -15,11 +15,10 @@
  */
 package org.springframework.batch.test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.core.BatchStatus;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.launch.JobLauncher;
@@ -31,6 +30,8 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import org.springframework.test.jdbc.JdbcTestUtils;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringJUnitConfig(locations = { "/simple-job-launcher-context.xml", "/jobs/sample-steps.xml" })
 class SampleStepTests implements ApplicationContextAware {

@@ -15,14 +15,14 @@
  */
 package org.springframework.batch.item.file.transform;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 /**
  * @author Dan Garrette

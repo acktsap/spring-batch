@@ -18,12 +18,12 @@ package org.springframework.batch.item.database;
 import java.util.Collection;
 import java.util.Map;
 
-import org.hibernate.query.Query;
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.StatelessSession;
+import org.hibernate.query.Query;
 
 import org.springframework.batch.item.database.orm.HibernateQueryProvider;
 import org.springframework.beans.factory.InitializingBean;

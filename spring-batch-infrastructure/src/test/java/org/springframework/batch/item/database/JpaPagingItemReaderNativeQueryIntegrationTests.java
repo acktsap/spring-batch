@@ -17,8 +17,8 @@ package org.springframework.batch.item.database;
 
 import java.util.Collections;
 
-import jakarta.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import jakarta.persistence.EntityManagerFactory;
 
 import org.springframework.batch.item.database.orm.JpaNativeQueryProvider;
 import org.springframework.batch.item.sample.Foo;

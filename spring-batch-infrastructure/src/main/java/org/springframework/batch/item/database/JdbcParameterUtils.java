@@ -16,9 +16,9 @@
 
 package org.springframework.batch.item.database;
 
-import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Helper methods for SQL statement parameter parsing.

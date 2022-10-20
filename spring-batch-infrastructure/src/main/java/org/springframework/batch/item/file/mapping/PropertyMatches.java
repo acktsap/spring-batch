@@ -16,14 +16,14 @@
 
 package org.springframework.batch.item.file.mapping;
 
-import org.springframework.beans.BeanUtils;
-import org.springframework.util.ObjectUtils;
-import org.springframework.util.StringUtils;
-
 import java.beans.PropertyDescriptor;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.util.ObjectUtils;
+import org.springframework.util.StringUtils;
 
 /**
  * Helper class for calculating bean property matches, according to. Used by

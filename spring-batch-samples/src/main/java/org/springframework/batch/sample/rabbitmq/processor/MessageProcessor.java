@@ -15,10 +15,10 @@
  */
 package org.springframework.batch.sample.rabbitmq.processor;
 
+import java.util.Date;
+
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.lang.Nullable;
-
-import java.util.Date;
 
 /**
  * <p>

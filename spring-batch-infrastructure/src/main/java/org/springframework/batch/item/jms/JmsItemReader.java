@@ -16,16 +16,17 @@
 
 package org.springframework.batch.item.jms;
 
+import jakarta.jms.Message;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
 import org.springframework.batch.item.ItemReader;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.jms.core.JmsOperations;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
-
-import jakarta.jms.Message;
 
 /**
  * An {@link ItemReader} for JMS using a {@link JmsTemplate}. The template should have a

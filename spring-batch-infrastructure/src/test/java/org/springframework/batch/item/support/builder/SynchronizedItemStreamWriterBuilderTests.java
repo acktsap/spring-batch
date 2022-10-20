@@ -16,6 +16,7 @@
 package org.springframework.batch.item.support.builder;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.support.AbstractSynchronizedItemStreamWriterTests;
 import org.springframework.batch.item.support.SynchronizedItemStreamWriter;
 

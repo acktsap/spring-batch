@@ -16,8 +16,6 @@
 
 package org.springframework.batch.item.database;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,11 +23,14 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Query;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.database.orm.JpaNativeQueryProvider;
 import org.springframework.batch.item.sample.Foo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import org.springframework.transaction.annotation.Transactional;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author Anatoly Polinsky

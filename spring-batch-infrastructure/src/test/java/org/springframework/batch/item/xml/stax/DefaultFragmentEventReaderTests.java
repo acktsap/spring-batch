@@ -23,6 +23,7 @@ import javax.xml.stream.events.XMLEvent;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.xml.EventHelper;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;

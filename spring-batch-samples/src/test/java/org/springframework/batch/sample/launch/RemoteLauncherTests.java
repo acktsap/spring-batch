@@ -15,11 +15,18 @@
  */
 package org.springframework.batch.sample.launch;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.management.MalformedObjectNameException;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.core.launch.JobOperator;
 import org.springframework.batch.core.launch.support.JobRegistryBackgroundJobRunner;
 import org.springframework.jmx.MBeanServerNotFoundException;
@@ -27,12 +34,11 @@ import org.springframework.jmx.access.InvalidInvocationException;
 import org.springframework.jmx.access.MBeanProxyFactoryBean;
 import org.springframework.jmx.support.MBeanServerConnectionFactoryBean;
 
-import javax.management.MalformedObjectNameException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * @author Dave Syer

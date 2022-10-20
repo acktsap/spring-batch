@@ -15,8 +15,8 @@
  */
 package org.springframework.batch.sample.config;
 
-import jakarta.annotation.PostConstruct;
 import javax.sql.DataSource;
+import jakarta.annotation.PostConstruct;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 

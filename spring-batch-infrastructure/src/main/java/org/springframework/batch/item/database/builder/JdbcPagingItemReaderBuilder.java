@@ -16,6 +16,7 @@
 package org.springframework.batch.item.database.builder;
 
 import java.util.Map;
+
 import javax.sql.DataSource;
 
 import org.springframework.batch.item.database.JdbcPagingItemReader;

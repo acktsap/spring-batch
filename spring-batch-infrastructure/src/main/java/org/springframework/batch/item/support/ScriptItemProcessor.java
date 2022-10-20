@@ -15,20 +15,20 @@
  */
 package org.springframework.batch.item.support;
 
-import org.springframework.lang.Nullable;
-import org.springframework.scripting.support.StaticScriptSource;
-import org.springframework.util.StringUtils;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.core.io.Resource;
+import org.springframework.lang.Nullable;
 import org.springframework.scripting.ScriptEvaluator;
 import org.springframework.scripting.ScriptSource;
 import org.springframework.scripting.support.ResourceScriptSource;
 import org.springframework.scripting.support.StandardScriptEvaluator;
+import org.springframework.scripting.support.StaticScriptSource;
 import org.springframework.util.Assert;
-
-import java.util.HashMap;
-import java.util.Map;
+import org.springframework.util.StringUtils;
 
 /**
  * <p>

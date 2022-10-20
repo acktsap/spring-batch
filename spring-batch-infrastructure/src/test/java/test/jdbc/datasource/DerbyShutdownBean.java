@@ -22,6 +22,7 @@ import javax.sql.DataSource;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.derby.jdbc.EmbeddedDataSource;
+
 import org.springframework.beans.factory.DisposableBean;
 
 public class DerbyShutdownBean implements DisposableBean {

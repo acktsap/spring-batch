@@ -16,6 +16,9 @@
 
 package org.springframework.batch.item.support;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.batch.item.Chunk;
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.batch.item.ItemStream;
@@ -24,9 +27,6 @@ import org.springframework.batch.item.ItemStreamWriter;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
-
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Calls a collection of {@link ItemWriter}s in fixed-order sequence.<br>

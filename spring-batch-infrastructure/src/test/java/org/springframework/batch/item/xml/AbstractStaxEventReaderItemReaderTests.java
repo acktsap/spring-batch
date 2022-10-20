@@ -15,8 +15,6 @@
  */
 package org.springframework.batch.item.xml;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,11 +22,14 @@ import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.batch.item.xml.domain.Trade;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.oxm.Unmarshaller;
 import org.springframework.util.ClassUtils;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 abstract class AbstractStaxEventReaderItemReaderTests {
 

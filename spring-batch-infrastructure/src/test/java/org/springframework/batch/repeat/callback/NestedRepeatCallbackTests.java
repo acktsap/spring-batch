@@ -17,9 +17,10 @@
 package org.springframework.batch.repeat.callback;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.batch.repeat.RepeatStatus;
+
 import org.springframework.batch.repeat.RepeatCallback;
 import org.springframework.batch.repeat.RepeatContext;
+import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.batch.repeat.support.RepeatTemplate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -16,13 +16,13 @@
 
 package org.springframework.batch.repeat.support;
 
-import org.springframework.batch.repeat.RepeatStatus;
-
 import java.util.Comparator;
 import java.util.NoSuchElementException;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.Semaphore;
+
+import org.springframework.batch.repeat.RepeatStatus;
 
 /**
  * An implementation of the {@link ResultQueue} that throttles the number of expected

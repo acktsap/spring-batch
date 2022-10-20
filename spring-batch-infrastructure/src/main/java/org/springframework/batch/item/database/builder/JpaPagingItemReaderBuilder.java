@@ -16,6 +16,7 @@
 package org.springframework.batch.item.database.builder;
 
 import java.util.Map;
+
 import jakarta.persistence.EntityManagerFactory;
 
 import org.springframework.batch.item.database.JpaPagingItemReader;

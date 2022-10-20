@@ -16,6 +16,7 @@
 package org.springframework.batch.item.database.builder;
 
 import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.batch.item.database.AbstractCursorItemReader;

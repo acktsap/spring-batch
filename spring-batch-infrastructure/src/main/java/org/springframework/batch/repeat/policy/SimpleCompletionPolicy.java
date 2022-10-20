@@ -16,8 +16,8 @@
 
 package org.springframework.batch.repeat.policy;
 
-import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.batch.repeat.RepeatContext;
+import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.batch.repeat.context.RepeatContextSupport;
 import org.springframework.batch.repeat.support.RepeatTemplate;
 import org.springframework.util.ClassUtils;

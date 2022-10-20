@@ -17,6 +17,7 @@
 package org.springframework.batch.item.database.support;
 
 import java.sql.DatabaseMetaData;
+
 import javax.sql.DataSource;
 
 import org.springframework.batch.item.database.PagingQueryProvider;

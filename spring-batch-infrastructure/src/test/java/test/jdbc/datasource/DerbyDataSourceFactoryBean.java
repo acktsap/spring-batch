@@ -22,6 +22,7 @@ import javax.sql.DataSource;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.derby.jdbc.EmbeddedDataSource;
+
 import org.springframework.beans.factory.config.AbstractFactoryBean;
 
 public class DerbyDataSourceFactoryBean extends AbstractFactoryBean<DataSource> {

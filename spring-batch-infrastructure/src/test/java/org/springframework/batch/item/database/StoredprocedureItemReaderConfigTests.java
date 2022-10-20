@@ -15,9 +15,6 @@
  */
 package org.springframework.batch.item.database;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
@@ -29,6 +26,7 @@ import javax.sql.DataSource;
 
 import org.hsqldb.types.Types;
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.SqlParameter;
@@ -37,6 +35,9 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 class StoredprocedureItemReaderConfigTests {
 

@@ -15,8 +15,6 @@
  */
 package org.springframework.batch.item.database;
 
-import static org.junit.jupiter.api.Assertions.assertNull;
-
 import java.util.Collections;
 
 import javax.sql.DataSource;
@@ -28,6 +26,8 @@ import org.springframework.batch.item.database.support.HsqlPagingQueryProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.SingleColumnRowMapper;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
+
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 @SpringJUnitConfig(locations = "JdbcPagingItemReaderCommonTests-context.xml")
 class JdbcPagingItemReaderEmptyResultSetTests {

@@ -15,8 +15,6 @@
  */
 package org.springframework.batch.item.xml;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.io.StringReader;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -27,6 +25,7 @@ import javax.xml.transform.stream.StreamSource;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.batch.item.xml.domain.QualifiedTrade;
 import org.springframework.batch.item.xml.domain.Trade;
@@ -35,6 +34,8 @@ import org.springframework.core.io.Resource;
 import org.springframework.oxm.Unmarshaller;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.util.ClassUtils;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Jaxb2NamespaceUnmarshallingTests {
 

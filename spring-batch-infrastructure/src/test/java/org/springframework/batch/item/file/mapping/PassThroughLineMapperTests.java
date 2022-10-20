@@ -15,9 +15,9 @@
  */
 package org.springframework.batch.item.file.mapping;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertSame;
 
 /**
  * Tests for {@link PassThroughLineMapper}.

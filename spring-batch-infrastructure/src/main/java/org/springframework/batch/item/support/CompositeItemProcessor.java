@@ -16,13 +16,13 @@
 
 package org.springframework.batch.item.support;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
-
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Composite {@link ItemProcessor} that passes the item through a sequence of injected

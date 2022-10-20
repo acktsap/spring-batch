@@ -15,13 +15,13 @@
  */
 package org.springframework.batch.item.data;
 
+import java.util.Iterator;
+
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemStreamReader;
 import org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
-
-import java.util.Iterator;
 
 /**
  * A base class that handles basic reading logic based on the paginated semantics of

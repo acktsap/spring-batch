@@ -16,9 +16,9 @@
 
 package org.springframework.batch.support;
 
-import org.junit.jupiter.api.Test;
-
 import javax.sql.DataSource;
+
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

@@ -16,7 +16,12 @@
 
 package org.springframework.batch.container.jms;
 
+import jakarta.jms.JMSException;
+import jakarta.jms.MessageConsumer;
+import jakarta.jms.Session;
+
 import org.aopalliance.aop.Advice;
+
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
 import org.springframework.aop.support.NameMatchMethodPointcut;
@@ -25,10 +30,6 @@ import org.springframework.batch.repeat.interceptor.RepeatOperationsInterceptor;
 import org.springframework.jms.connection.TransactionAwareConnectionFactoryProxy;
 import org.springframework.jms.listener.DefaultMessageListenerContainer;
 import org.springframework.transaction.interceptor.TransactionInterceptor;
-
-import jakarta.jms.JMSException;
-import jakarta.jms.MessageConsumer;
-import jakarta.jms.Session;
 
 /**
  * Message listener container adapted for intercepting the message reception with advice

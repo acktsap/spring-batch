@@ -18,6 +18,7 @@ package org.springframework.batch.item.database;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
 import javax.sql.DataSource;
 
 import org.junit.jupiter.api.Test;

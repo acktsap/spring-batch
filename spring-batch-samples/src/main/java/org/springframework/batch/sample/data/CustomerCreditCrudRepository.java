@@ -16,7 +16,6 @@
 package org.springframework.batch.sample.data;
 
 import org.springframework.batch.sample.domain.trade.CustomerCredit;
-
 import org.springframework.data.repository.CrudRepository;
 
 public interface CustomerCreditCrudRepository extends CrudRepository<CustomerCredit, Long> {

@@ -18,14 +18,15 @@ package org.springframework.batch.integration.chunk;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
 import org.springframework.batch.core.JobInterruptedException;
 import org.springframework.batch.core.StepContribution;
-import org.springframework.batch.item.Chunk;
 import org.springframework.batch.core.step.item.ChunkProcessor;
 import org.springframework.batch.core.step.item.FaultTolerantChunkProcessor;
 import org.springframework.batch.core.step.skip.NonSkippableReadException;
 import org.springframework.batch.core.step.skip.SkipLimitExceededException;
 import org.springframework.batch.core.step.skip.SkipListenerFailedException;
+import org.springframework.batch.item.Chunk;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.integration.annotation.MessageEndpoint;
 import org.springframework.integration.annotation.ServiceActivator;

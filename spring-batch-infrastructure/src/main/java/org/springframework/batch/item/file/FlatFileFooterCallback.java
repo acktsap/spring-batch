@@ -16,8 +16,8 @@
 
 package org.springframework.batch.item.file;
 
-import java.io.Writer;
 import java.io.IOException;
+import java.io.Writer;
 
 /**
  * Callback interface for writing a footer to a file.

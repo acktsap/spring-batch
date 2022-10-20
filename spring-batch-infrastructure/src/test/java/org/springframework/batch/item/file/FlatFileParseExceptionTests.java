@@ -17,6 +17,7 @@
 package org.springframework.batch.item.file;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.common.AbstractExceptionTests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

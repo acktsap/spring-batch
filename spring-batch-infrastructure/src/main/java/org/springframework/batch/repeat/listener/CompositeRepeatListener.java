@@ -19,9 +19,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.batch.repeat.RepeatContext;
 import org.springframework.batch.repeat.RepeatListener;
+import org.springframework.batch.repeat.RepeatStatus;
 
 /**
  * Allows a user to register one or more RepeatListeners to be notified on batch events.

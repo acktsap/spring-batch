@@ -15,8 +15,15 @@
  */
 package org.springframework.batch.core.step.builder;
 
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.StepExecutionListener;
 import org.springframework.batch.core.annotation.AfterStep;
@@ -24,15 +31,7 @@ import org.springframework.batch.core.annotation.BeforeStep;
 import org.springframework.batch.core.listener.StepListenerFactoryBean;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.AbstractStep;
-import org.springframework.batch.core.step.tasklet.TaskletStep;
 import org.springframework.batch.support.ReflectionUtils;
-import org.springframework.transaction.PlatformTransactionManager;
-
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 /**
  * A base class and utility for other step builders providing access to common properties

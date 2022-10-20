@@ -15,12 +15,13 @@
  */
 package org.springframework.batch.sample.common;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.Chunk;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.support.transaction.TransactionAwareProxyFactory;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -32,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @author Lucas Ward
  * @author Mahmoud Ben Hassine
  * @author Glenn Renfro
- * 
+ *
  */
 class CustomItemWriterTests {
 

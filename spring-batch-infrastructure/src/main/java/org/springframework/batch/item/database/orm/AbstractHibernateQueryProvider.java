@@ -16,9 +16,9 @@
 
 package org.springframework.batch.item.database.orm;
 
-import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.StatelessSession;
+import org.hibernate.query.Query;
 
 /**
  * <p>

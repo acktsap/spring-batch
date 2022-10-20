@@ -15,10 +15,11 @@
  */
 package org.springframework.batch.sample.domain.trade.internal;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.batch.sample.domain.trade.CustomerCredit;
-
 import java.math.BigDecimal;
+
+import org.junit.jupiter.api.Test;
+
+import org.springframework.batch.sample.domain.trade.CustomerCredit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

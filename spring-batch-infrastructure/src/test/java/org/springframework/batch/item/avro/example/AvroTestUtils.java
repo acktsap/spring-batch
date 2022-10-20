@@ -18,12 +18,14 @@ package org.springframework.batch.item.avro.example;
 
 import java.io.File;
 import java.io.FileOutputStream;
+
 import org.apache.avro.Schema;
 import org.apache.avro.file.DataFileWriter;
 import org.apache.avro.io.DatumWriter;
 import org.apache.avro.io.Encoder;
 import org.apache.avro.io.EncoderFactory;
 import org.apache.avro.specific.SpecificDatumWriter;
+
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 

@@ -18,10 +18,10 @@ package org.springframework.batch.item.jms;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.lang.Nullable;
-import org.springframework.retry.interceptor.MethodInvocationRecoverer;
 import org.springframework.jms.JmsException;
 import org.springframework.jms.core.JmsOperations;
+import org.springframework.lang.Nullable;
+import org.springframework.retry.interceptor.MethodInvocationRecoverer;
 
 /**
  * @author Dave Syer

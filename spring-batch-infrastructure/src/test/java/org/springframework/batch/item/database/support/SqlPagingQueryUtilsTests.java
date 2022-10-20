@@ -16,13 +16,14 @@
 
 package org.springframework.batch.item.database.support;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.database.Order;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author Thomas Risberg

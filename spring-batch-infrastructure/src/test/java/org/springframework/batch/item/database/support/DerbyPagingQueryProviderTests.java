@@ -15,20 +15,21 @@
  */
 package org.springframework.batch.item.database.support;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 
 import javax.sql.DataSource;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.database.Order;
 import org.springframework.dao.InvalidDataAccessResourceUsageException;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * @author Thomas Risberg

@@ -18,6 +18,7 @@ package org.springframework.batch.sample.domain.trade.internal;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
 import org.springframework.batch.core.launch.support.CommandLineJobRunner;
 import org.springframework.batch.sample.domain.trade.CustomerUpdate;
 import org.springframework.batch.sample.domain.trade.InvalidCustomerLogger;

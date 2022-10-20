@@ -18,10 +18,11 @@ package org.springframework.batch.repeat.exception;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.classify.Classifier;
-import org.springframework.classify.ClassifierSupport;
+
 import org.springframework.batch.repeat.RepeatContext;
 import org.springframework.batch.repeat.RepeatException;
+import org.springframework.classify.Classifier;
+import org.springframework.classify.ClassifierSupport;
 
 /**
  * Implementation of {@link ExceptionHandler} based on an {@link Classifier}. The

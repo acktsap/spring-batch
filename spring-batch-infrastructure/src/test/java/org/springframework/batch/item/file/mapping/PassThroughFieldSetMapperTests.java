@@ -16,6 +16,7 @@
 package org.springframework.batch.item.file.mapping;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.file.transform.DefaultFieldSet;
 import org.springframework.batch.item.file.transform.FieldSet;
 

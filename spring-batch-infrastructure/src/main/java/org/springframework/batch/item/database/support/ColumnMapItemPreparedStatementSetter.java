@@ -16,15 +16,15 @@
 
 package org.springframework.batch.item.database.support;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Map;
+
 import org.springframework.batch.item.database.ItemPreparedStatementSetter;
 import org.springframework.jdbc.core.ColumnMapRowMapper;
 import org.springframework.jdbc.core.SqlTypeValue;
 import org.springframework.jdbc.core.StatementCreatorUtils;
 import org.springframework.util.Assert;
-
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.Map;
 
 /**
  * <p>

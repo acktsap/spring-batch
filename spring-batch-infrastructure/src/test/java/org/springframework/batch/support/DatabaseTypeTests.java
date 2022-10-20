@@ -15,18 +15,20 @@
  */
 package org.springframework.batch.support;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.jdbc.support.MetaDataAccessException;
-
 import javax.sql.DataSource;
+
+import org.junit.jupiter.api.Test;
+
+import org.springframework.jdbc.support.MetaDataAccessException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.springframework.batch.support.DatabaseType.DB2;
+import static org.springframework.batch.support.DatabaseType.DB2AS400;
 import static org.springframework.batch.support.DatabaseType.DB2VSE;
 import static org.springframework.batch.support.DatabaseType.DB2ZOS;
-import static org.springframework.batch.support.DatabaseType.DB2AS400;
 import static org.springframework.batch.support.DatabaseType.DERBY;
+import static org.springframework.batch.support.DatabaseType.HANA;
 import static org.springframework.batch.support.DatabaseType.HSQL;
 import static org.springframework.batch.support.DatabaseType.MYSQL;
 import static org.springframework.batch.support.DatabaseType.ORACLE;
@@ -34,7 +36,6 @@ import static org.springframework.batch.support.DatabaseType.POSTGRES;
 import static org.springframework.batch.support.DatabaseType.SQLITE;
 import static org.springframework.batch.support.DatabaseType.SQLSERVER;
 import static org.springframework.batch.support.DatabaseType.SYBASE;
-import static org.springframework.batch.support.DatabaseType.HANA;
 import static org.springframework.batch.support.DatabaseType.fromProductName;
 
 /**

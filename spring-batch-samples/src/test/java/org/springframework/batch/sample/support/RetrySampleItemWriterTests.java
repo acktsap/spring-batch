@@ -16,6 +16,7 @@
 package org.springframework.batch.sample.support;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.Chunk;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

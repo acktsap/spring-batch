@@ -17,6 +17,7 @@
 package org.springframework.batch.sample.remotepartitioning;
 
 import jakarta.jms.JMSException;
+
 import org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory;
 
 import org.springframework.beans.factory.annotation.Value;

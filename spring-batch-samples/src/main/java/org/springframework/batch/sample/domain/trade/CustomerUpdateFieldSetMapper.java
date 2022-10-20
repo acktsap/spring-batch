@@ -23,9 +23,9 @@ import org.springframework.batch.item.file.transform.FieldSet;
 
 /**
  * {@link FieldSetMapper} for mapping to a {@link CustomerUpdate}.
- * 
+ *
  * @author Lucas Ward
- * 
+ *
  */
 public class CustomerUpdateFieldSetMapper implements FieldSetMapper<CustomerUpdate> {
 

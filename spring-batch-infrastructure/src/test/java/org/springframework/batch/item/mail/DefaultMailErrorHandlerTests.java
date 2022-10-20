@@ -15,15 +15,17 @@
  */
 package org.springframework.batch.item.mail;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import jakarta.mail.MessagingException;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.mail.MailException;
 import org.springframework.mail.MailMessage;
 import org.springframework.mail.MailSendException;
 import org.springframework.mail.SimpleMailMessage;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @author Dave Syer

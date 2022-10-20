@@ -15,11 +15,11 @@
  */
 package org.springframework.batch.item.xml;
 
+import java.util.Collections;
+
 import org.springframework.batch.item.xml.domain.Trade;
 import org.springframework.oxm.Marshaller;
 import org.springframework.oxm.xstream.XStreamMarshaller;
-
-import java.util.Collections;
 
 class XStreamMarshallingTests extends AbstractStaxEventWriterItemWriterTests {
 

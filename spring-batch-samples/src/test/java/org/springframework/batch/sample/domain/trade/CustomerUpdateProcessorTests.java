@@ -15,16 +15,18 @@
  */
 package org.springframework.batch.sample.domain.trade;
 
+import java.math.BigDecimal;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.springframework.batch.sample.domain.trade.CustomerOperation.*;
+import static org.springframework.batch.sample.domain.trade.CustomerOperation.ADD;
+import static org.springframework.batch.sample.domain.trade.CustomerOperation.DELETE;
+import static org.springframework.batch.sample.domain.trade.CustomerOperation.UPDATE;
 
 /**
  * @author Lucas Ward

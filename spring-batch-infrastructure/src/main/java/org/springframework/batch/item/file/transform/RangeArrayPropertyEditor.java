@@ -16,12 +16,12 @@
 
 package org.springframework.batch.item.file.transform;
 
-import org.springframework.util.Assert;
-import org.springframework.util.StringUtils;
-
 import java.beans.PropertyEditorSupport;
 import java.util.Arrays;
 import java.util.Comparator;
+
+import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
 
 /**
  * Property editor implementation which parses string and creates array of ranges. Ranges

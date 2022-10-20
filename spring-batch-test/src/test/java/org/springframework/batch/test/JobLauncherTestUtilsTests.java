@@ -15,6 +15,11 @@
  */
 package org.springframework.batch.test;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.sql.DataSource;
+
 import org.junit.jupiter.api.Test;
 
 import org.springframework.batch.core.ExitStatus;
@@ -30,7 +35,6 @@ import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.builder.StepBuilder;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -38,11 +42,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.support.JdbcTransactionManager;
 import org.springframework.lang.Nullable;
-
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.sql.DataSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;

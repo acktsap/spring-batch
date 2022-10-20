@@ -15,9 +15,9 @@
  */
 package org.springframework.batch.sample.domain.trade.internal.validator;
 
+import org.springframework.batch.sample.domain.trade.Trade;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
-import org.springframework.batch.sample.domain.trade.Trade;
 
 /**
  * @author Michael Minella

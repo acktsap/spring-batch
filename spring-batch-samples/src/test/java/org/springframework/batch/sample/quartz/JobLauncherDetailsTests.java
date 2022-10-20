@@ -15,6 +15,11 @@
  */
 package org.springframework.batch.sample.quartz;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.quartz.Job;
@@ -25,6 +30,7 @@ import org.quartz.impl.JobDetailImpl;
 import org.quartz.impl.JobExecutionContextImpl;
 import org.quartz.impl.triggers.SimpleTriggerImpl;
 import org.quartz.spi.TriggerFiredBundle;
+
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.JobParametersIncrementer;
@@ -36,18 +42,13 @@ import org.springframework.batch.core.repository.JobExecutionAlreadyRunningExcep
 import org.springframework.batch.core.repository.JobRestartException;
 import org.springframework.lang.Nullable;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 
 /**
  * @author Dave Syer
  * @author Glenn Renfro
- * 
+ *
  */
 class JobLauncherDetailsTests {
 

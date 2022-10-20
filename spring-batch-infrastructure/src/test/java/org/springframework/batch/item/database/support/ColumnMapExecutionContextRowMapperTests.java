@@ -15,7 +15,6 @@
  */
 package org.springframework.batch.item.database.support;
 
-import static org.mockito.Mockito.mock;
 import java.sql.PreparedStatement;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -23,6 +22,8 @@ import java.util.Map;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.mockito.Mockito.mock;
 
 /**
  * @author Lucas Ward

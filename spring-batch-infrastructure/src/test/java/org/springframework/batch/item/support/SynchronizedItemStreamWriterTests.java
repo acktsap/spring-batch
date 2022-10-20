@@ -16,6 +16,7 @@
 package org.springframework.batch.item.support;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.beans.factory.InitializingBean;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

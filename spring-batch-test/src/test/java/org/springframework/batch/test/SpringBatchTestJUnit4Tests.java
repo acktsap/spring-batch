@@ -16,6 +16,7 @@
 package org.springframework.batch.test;
 
 import java.util.Arrays;
+
 import javax.sql.DataSource;
 
 import org.junit.Assert;

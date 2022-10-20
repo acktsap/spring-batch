@@ -15,8 +15,6 @@
  */
 package org.springframework.batch.sample.domain.trade.internal;
 
-import static org.mockito.Mockito.when;
-
 import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -24,6 +22,8 @@ import java.sql.SQLException;
 import org.springframework.batch.sample.domain.trade.CustomerCredit;
 import org.springframework.batch.sample.support.AbstractRowMapperTests;
 import org.springframework.jdbc.core.RowMapper;
+
+import static org.mockito.Mockito.when;
 
 class CustomerCreditRowMapperTests extends AbstractRowMapperTests<CustomerCredit> {
 

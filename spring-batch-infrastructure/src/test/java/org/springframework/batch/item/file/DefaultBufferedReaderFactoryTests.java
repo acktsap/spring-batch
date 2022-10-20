@@ -15,12 +15,13 @@
  */
 package org.springframework.batch.item.file;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.io.BufferedReader;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.core.io.ByteArrayResource;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author Dave Syer

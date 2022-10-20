@@ -15,9 +15,9 @@
  */
 package org.springframework.batch.sample.domain.trade;
 
-import org.junit.jupiter.api.Test;
-
 import java.math.BigDecimal;
+
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

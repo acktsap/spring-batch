@@ -15,11 +15,11 @@
  */
 package org.springframework.batch.item.support;
 
-import org.springframework.batch.item.Chunk;
-import org.springframework.batch.item.ItemWriter;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.batch.item.Chunk;
+import org.springframework.batch.item.ItemWriter;
 
 /**
  * @author mminella

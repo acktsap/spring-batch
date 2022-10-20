@@ -15,18 +15,19 @@
  */
 package org.springframework.batch.item.support;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
-import org.springframework.scripting.bsh.BshScriptEvaluator;
-import org.springframework.scripting.groovy.GroovyScriptEvaluator;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.script.ScriptEngineFactory;
 import javax.script.ScriptEngineManager;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.scripting.bsh.BshScriptEvaluator;
+import org.springframework.scripting.groovy.GroovyScriptEvaluator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

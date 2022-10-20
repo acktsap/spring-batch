@@ -16,10 +16,12 @@
 
 package org.springframework.batch.sample.domain.trade;
 
-import static org.springframework.batch.sample.domain.trade.CustomerOperation.*;
-
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.lang.Nullable;
+
+import static org.springframework.batch.sample.domain.trade.CustomerOperation.ADD;
+import static org.springframework.batch.sample.domain.trade.CustomerOperation.DELETE;
+import static org.springframework.batch.sample.domain.trade.CustomerOperation.UPDATE;
 
 /**
  * @author Lucas Ward

@@ -15,6 +15,8 @@
  */
 package org.springframework.batch.integration.config.xml;
 
+import org.w3c.dom.Element;
+
 import org.springframework.batch.integration.chunk.ChunkMessageChannelItemWriter;
 import org.springframework.batch.integration.chunk.RemoteChunkHandlerFactoryBean;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -24,7 +26,6 @@ import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.xml.AbstractBeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.springframework.util.Assert;
-import org.w3c.dom.Element;
 
 /**
  * <p>

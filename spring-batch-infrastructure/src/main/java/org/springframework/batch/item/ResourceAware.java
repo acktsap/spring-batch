@@ -15,8 +15,8 @@
  */
 package org.springframework.batch.item;
 
-import org.springframework.core.io.Resource;
 import org.springframework.batch.item.file.MultiResourceItemReader;
+import org.springframework.core.io.Resource;
 
 /**
  * Marker interface indicating that an item should have the Spring {@link Resource} in

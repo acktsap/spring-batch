@@ -15,10 +15,11 @@
  */
 package org.springframework.batch.item.sample.books;
 
+import java.util.Objects;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import java.util.Objects;
 
 /**
  * Simple domain object implied in an association with {@link Author}.

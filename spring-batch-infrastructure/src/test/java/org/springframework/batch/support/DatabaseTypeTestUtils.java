@@ -17,6 +17,7 @@ package org.springframework.batch.support;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
+
 import javax.sql.DataSource;
 
 import org.apache.commons.dbcp2.BasicDataSource;

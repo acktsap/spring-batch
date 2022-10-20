@@ -15,13 +15,15 @@
  */
 package org.springframework.batch.sample.jmx;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.jmx.export.notification.NotificationPublisher;
-import org.springframework.jmx.export.notification.UnableToSendNotificationException;
-
-import javax.management.Notification;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.management.Notification;
+
+import org.junit.jupiter.api.Test;
+
+import org.springframework.jmx.export.notification.NotificationPublisher;
+import org.springframework.jmx.export.notification.UnableToSendNotificationException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

@@ -15,8 +15,6 @@
  */
 package org.springframework.batch.item.xml;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.io.StringWriter;
 import java.math.BigDecimal;
 
@@ -25,6 +23,8 @@ import javax.xml.transform.stream.StreamResult;
 import org.springframework.batch.item.xml.domain.Trade;
 import org.springframework.oxm.Marshaller;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class Jaxb2MarshallingTests extends AbstractStaxEventWriterItemWriterTests {
 

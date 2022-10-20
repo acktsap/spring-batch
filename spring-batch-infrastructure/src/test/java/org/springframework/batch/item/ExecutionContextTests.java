@@ -15,16 +15,17 @@
  */
 package org.springframework.batch.item;
 
+import java.io.Serializable;
+
+import org.junit.jupiter.api.Test;
+
+import org.springframework.util.SerializationUtils;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import java.io.Serializable;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.util.SerializationUtils;
 
 /**
  * @author Lucas Ward

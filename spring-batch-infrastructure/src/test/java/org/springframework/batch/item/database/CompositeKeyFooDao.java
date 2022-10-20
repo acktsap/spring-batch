@@ -19,11 +19,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Map;
 
+import javax.sql.DataSource;
+
 import org.springframework.batch.item.sample.Foo;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
-
-import javax.sql.DataSource;
 
 /**
  * @author Lucas Ward

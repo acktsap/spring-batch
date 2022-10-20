@@ -15,16 +15,17 @@
  */
 package org.springframework.batch.item.support;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.classify.PatternMatchingClassifier;
 import org.springframework.classify.SubclassClassifier;
 import org.springframework.lang.Nullable;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author Jimmy Praet

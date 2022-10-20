@@ -15,9 +15,9 @@
  */
 package org.springframework.batch.item.database;
 
-import org.springframework.batch.item.sample.Foo;
-
 import javax.sql.DataSource;
+
+import org.springframework.batch.item.sample.Foo;
 
 /**
  * @author Lucas Ward

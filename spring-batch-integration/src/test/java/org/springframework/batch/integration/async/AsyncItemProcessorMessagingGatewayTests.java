@@ -15,14 +15,12 @@
  */
 package org.springframework.batch.integration.async;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Future;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.core.JobParametersBuilder;
 import org.springframework.batch.core.StepExecution;
 import org.springframework.batch.item.ItemProcessor;
@@ -35,6 +33,9 @@ import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.TestExecutionListeners.MergeMode;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringJUnitConfig
 @TestExecutionListeners(listeners = StepScopeTestExecutionListener.class, mergeMode = MergeMode.MERGE_WITH_DEFAULTS)

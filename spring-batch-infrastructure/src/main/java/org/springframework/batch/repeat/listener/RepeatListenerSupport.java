@@ -16,9 +16,9 @@
 
 package org.springframework.batch.repeat.listener;
 
-import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.batch.repeat.RepeatContext;
 import org.springframework.batch.repeat.RepeatListener;
+import org.springframework.batch.repeat.RepeatStatus;
 
 /**
  * Empty method implementation of {@link RepeatListener}.

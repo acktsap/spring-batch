@@ -15,15 +15,18 @@
  */
 package org.springframework.batch.item.file;
 
+import java.util.Comparator;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.batch.item.ResourceAware;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
-import java.util.Comparator;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 /**
  * Tests to ensure that the current Resource is correctly being set on items that

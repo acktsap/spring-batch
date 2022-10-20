@@ -16,14 +16,15 @@
 
 package org.springframework.batch.support;
 
-import org.springframework.jdbc.support.JdbcUtils;
-import org.springframework.jdbc.support.MetaDataAccessException;
-import org.springframework.util.StringUtils;
-
-import javax.sql.DataSource;
 import java.sql.DatabaseMetaData;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.support.JdbcUtils;
+import org.springframework.jdbc.support.MetaDataAccessException;
+import org.springframework.util.StringUtils;
 
 /**
  * Enum representing a database type, such as DB2 or oracle. The type also contains a

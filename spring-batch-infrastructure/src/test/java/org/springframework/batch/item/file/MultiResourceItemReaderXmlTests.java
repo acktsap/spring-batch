@@ -15,8 +15,6 @@
  */
 package org.springframework.batch.item.file;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.io.IOException;
 import java.util.Comparator;
 
@@ -35,6 +33,8 @@ import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.oxm.Unmarshaller;
 import org.springframework.oxm.XmlMappingException;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MultiResourceItemReaderXmlTests extends AbstractItemStreamItemReaderTests {
 

@@ -18,7 +18,6 @@ package org.springframework.batch.item.database.builder;
 import javax.sql.DataSource;
 
 import org.springframework.batch.item.database.AbstractCursorItemReader;
-
 import org.springframework.batch.item.database.StoredProcedureItemReader;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;

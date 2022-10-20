@@ -16,12 +16,13 @@
 
 package org.springframework.batch.item.file.transform;
 
+import org.junit.jupiter.api.Test;
+
+import org.springframework.beans.NotReadablePropertyException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.NotReadablePropertyException;
 
 /**
  * @author Dan Garrette

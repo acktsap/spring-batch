@@ -16,8 +16,8 @@
 
 package org.springframework.batch.repeat.support;
 
-import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.batch.repeat.RepeatContext;
+import org.springframework.batch.repeat.RepeatStatus;
 
 /**
  * Interface for result holder.

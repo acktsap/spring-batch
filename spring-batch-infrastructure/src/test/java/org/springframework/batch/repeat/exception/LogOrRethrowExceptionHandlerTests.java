@@ -30,9 +30,9 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.classify.ClassifierSupport;
 import org.springframework.batch.repeat.RepeatContext;
 import org.springframework.batch.repeat.exception.LogOrRethrowExceptionHandler.Level;
+import org.springframework.classify.ClassifierSupport;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

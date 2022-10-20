@@ -15,9 +15,6 @@
  */
 package org.springframework.batch.item.xml.stax;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
 import javax.xml.namespace.NamespaceContext;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLEventWriter;
@@ -27,6 +24,8 @@ import javax.xml.stream.events.XMLEvent;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * @author Lucas Ward
