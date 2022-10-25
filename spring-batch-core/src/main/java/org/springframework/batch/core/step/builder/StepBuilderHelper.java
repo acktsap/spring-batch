@@ -17,21 +17,17 @@ package org.springframework.batch.core.step.builder;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.batch.core.Step;
+
 import org.springframework.batch.core.StepExecutionListener;
 import org.springframework.batch.core.annotation.AfterStep;
 import org.springframework.batch.core.annotation.BeforeStep;
 import org.springframework.batch.core.listener.StepListenerFactoryBean;
 import org.springframework.batch.core.repository.JobRepository;
-import org.springframework.batch.core.step.AbstractStep;
-import org.springframework.batch.core.step.tasklet.TaskletStep;
+import org.springframework.batch.core.step.StepProperties;
 import org.springframework.batch.support.ReflectionUtils;
-import org.springframework.transaction.PlatformTransactionManager;
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -41,17 +37,18 @@ import java.util.Set;
  * @author Dave Syer
  * @author Michael Minella
  * @author Mahmoud Ben Hassine
+ * @author Taeik Lim
  * @since 2.2
  */
 public abstract class StepBuilderHelper<B extends StepBuilderHelper<B>> {
 
 	protected final Log logger = LogFactory.getLog(getClass());
 
-	protected final CommonStepProperties properties;
+	protected final StepProperties properties;
 
 	public StepBuilderHelper(String name) {
-		this.properties = new CommonStepProperties();
-		properties.name = name;
+		this.properties = new StepProperties();
+		properties.setName(name);
 	}
 
 	/**
@@ -60,16 +57,16 @@ public abstract class StepBuilderHelper<B extends StepBuilderHelper<B>> {
 	 * @param parent a parent helper containing common step properties
 	 */
 	protected StepBuilderHelper(StepBuilderHelper<?> parent) {
-		this.properties = new CommonStepProperties(parent.properties);
+		this.properties = new StepProperties(parent.properties);
 	}
 
 	public B repository(JobRepository jobRepository) {
-		properties.jobRepository = jobRepository;
+		properties.setJobRepository(jobRepository);
 		return self();
 	}
 
 	public B startLimit(int startLimit) {
-		properties.startLimit = startLimit;
+		properties.setStartLimit(startLimit);
 		return self();
 	}
 
@@ -98,114 +95,22 @@ public abstract class StepBuilderHelper<B extends StepBuilderHelper<B>> {
 	}
 
 	public B allowStartIfComplete(boolean allowStartIfComplete) {
-		properties.allowStartIfComplete = allowStartIfComplete;
+		properties.setAllowStartIfComplete(allowStartIfComplete);
 		return self();
 	}
 
 	protected abstract B self();
 
 	protected String getName() {
-		return properties.name;
+		return properties.getName();
 	}
 
 	protected JobRepository getJobRepository() {
-		return properties.jobRepository;
+		return properties.getJobRepository();
 	}
 
 	protected boolean isAllowStartIfComplete() {
-		return properties.allowStartIfComplete != null ? properties.allowStartIfComplete : false;
-	}
-
-	protected void enhance(Step target) {
-
-		if (target instanceof AbstractStep) {
-
-			AbstractStep step = (AbstractStep) target;
-			step.setJobRepository(properties.getJobRepository());
-
-			Boolean allowStartIfComplete = properties.allowStartIfComplete;
-			if (allowStartIfComplete != null) {
-				step.setAllowStartIfComplete(allowStartIfComplete);
-			}
-
-			step.setStartLimit(properties.startLimit);
-
-			List<StepExecutionListener> listeners = properties.stepExecutionListeners;
-			if (!listeners.isEmpty()) {
-				step.setStepExecutionListeners(listeners.toArray(new StepExecutionListener[0]));
-			}
-
-		}
-
-	}
-
-	public static class CommonStepProperties {
-
-		private List<StepExecutionListener> stepExecutionListeners = new ArrayList<>();
-
-		private int startLimit = Integer.MAX_VALUE;
-
-		private Boolean allowStartIfComplete;
-
-		private JobRepository jobRepository;
-
-		public CommonStepProperties() {
-		}
-
-		public CommonStepProperties(CommonStepProperties properties) {
-			this.name = properties.name;
-			this.startLimit = properties.startLimit;
-			this.allowStartIfComplete = properties.allowStartIfComplete;
-			this.jobRepository = properties.jobRepository;
-			this.stepExecutionListeners = new ArrayList<>(properties.stepExecutionListeners);
-		}
-
-		public JobRepository getJobRepository() {
-			return jobRepository;
-		}
-
-		public void setJobRepository(JobRepository jobRepository) {
-			this.jobRepository = jobRepository;
-		}
-
-		public String getName() {
-			return name;
-		}
-
-		public void setName(String name) {
-			this.name = name;
-		}
-
-		public List<StepExecutionListener> getStepExecutionListeners() {
-			return stepExecutionListeners;
-		}
-
-		public void addStepExecutionListeners(List<StepExecutionListener> stepExecutionListeners) {
-			this.stepExecutionListeners.addAll(stepExecutionListeners);
-		}
-
-		public void addStepExecutionListener(StepExecutionListener stepExecutionListener) {
-			this.stepExecutionListeners.add(stepExecutionListener);
-		}
-
-		public Integer getStartLimit() {
-			return startLimit;
-		}
-
-		public void setStartLimit(Integer startLimit) {
-			this.startLimit = startLimit;
-		}
-
-		public Boolean getAllowStartIfComplete() {
-			return allowStartIfComplete;
-		}
-
-		public void setAllowStartIfComplete(Boolean allowStartIfComplete) {
-			this.allowStartIfComplete = allowStartIfComplete;
-		}
-
-		private String name;
-
+		return properties.getAllowStartIfComplete() != null ? properties.getAllowStartIfComplete() : false;
 	}
 
 }

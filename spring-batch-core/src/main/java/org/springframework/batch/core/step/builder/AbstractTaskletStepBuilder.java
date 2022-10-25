@@ -27,6 +27,8 @@ import org.springframework.batch.core.annotation.AfterChunk;
 import org.springframework.batch.core.annotation.AfterChunkError;
 import org.springframework.batch.core.annotation.BeforeChunk;
 import org.springframework.batch.core.listener.StepListenerFactoryBean;
+import org.springframework.batch.core.step.AbstractStep;
+import org.springframework.batch.core.step.StepProperties;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.core.step.tasklet.TaskletStep;
 import org.springframework.batch.item.ItemStream;
@@ -49,6 +51,7 @@ import org.springframework.transaction.interceptor.TransactionAttribute;
  * @author Dave Syer
  * @author Michael Minella
  * @author Mahmoud Ben Hassine
+ * @author Taeik Lim
  * @since 2.2
  * @param <B> the type of builder represented
  */
@@ -78,8 +81,8 @@ public abstract class AbstractTaskletStepBuilder<B extends AbstractTaskletStepBu
 
 	/**
 	 * Build the step from the components collected by the fluent setters. Delegates first
-	 * to {@link #enhance(Step)} and then to {@link #createTasklet()} in subclasses to
-	 * create the actual tasklet.
+	 * to {@link AbstractStep#enhance(StepProperties)} and then to
+	 * {@link #createTasklet()} in subclasses to create the actual tasklet.
 	 * @return a tasklet step fully configured and ready to execute
 	 */
 	public TaskletStep build() {
@@ -88,7 +91,7 @@ public abstract class AbstractTaskletStepBuilder<B extends AbstractTaskletStepBu
 
 		TaskletStep step = new TaskletStep(getName());
 
-		super.enhance(step);
+		step.enhance(properties);
 
 		step.setChunkListeners(chunkListeners.toArray(new ChunkListener[0]));
 

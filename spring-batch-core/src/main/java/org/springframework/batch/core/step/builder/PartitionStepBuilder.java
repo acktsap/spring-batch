@@ -34,6 +34,7 @@ import org.springframework.core.task.TaskExecutor;
  * @author Dave Syer
  * @author Mahmoud Ben Hassine
  * @author Dimitrios Liapis
+ * @author Taeik Lim
  * @since 2.2
  */
 public class PartitionStepBuilder extends StepBuilderHelper<PartitionStepBuilder> {
@@ -161,7 +162,7 @@ public class PartitionStepBuilder extends StepBuilderHelper<PartitionStepBuilder
 	public Step build() {
 		PartitionStep step = new PartitionStep();
 		step.setName(getName());
-		super.enhance(step);
+		step.enhance(properties);
 
 		if (partitionHandler != null) {
 			step.setPartitionHandler(partitionHandler);

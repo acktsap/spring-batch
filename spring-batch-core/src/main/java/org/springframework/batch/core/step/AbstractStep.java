@@ -60,6 +60,7 @@ import org.springframework.util.ClassUtils;
  * @author Michael Minella
  * @author Chris Schaefer
  * @author Mahmoud Ben Hassine
+ * @author Taeik Lim
  */
 public abstract class AbstractStep implements Step, InitializingBean, BeanNameAware {
 
@@ -181,6 +182,22 @@ public abstract class AbstractStep implements Step, InitializingBean, BeanNameAw
 	 * @throws Exception checked exception thrown by implementation
 	 */
 	protected void close(ExecutionContext ctx) throws Exception {
+	}
+
+	public void enhance(StepProperties properties) {
+		setJobRepository(properties.getJobRepository());
+
+		Boolean allowStartIfComplete = properties.getAllowStartIfComplete();
+		if (allowStartIfComplete != null) {
+			setAllowStartIfComplete(allowStartIfComplete);
+		}
+
+		setStartLimit(properties.getStartLimit());
+
+		List<StepExecutionListener> listeners = properties.getStepExecutionListeners();
+		if (!listeners.isEmpty()) {
+			setStepExecutionListeners(listeners.toArray(new StepExecutionListener[0]));
+		}
 	}
 
 	/**
