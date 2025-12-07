@@ -1,5 +1,5 @@
 /*
- * Copyright 2009-2025 the original author or authors.
+ * Copyright 2009-present the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -235,7 +235,7 @@ public class MessageChannelPartitionHandler extends AbstractPartitionHandler imp
 		Set<Long> partitionStepExecutionIds = split.stream().map(StepExecution::getId).collect(Collectors.toSet());
 
 		Callable<Set<StepExecution>> callback = () -> {
-			JobExecution jobExecution = jobRepository.getJobExecution(managerStepExecution.getJobExecutionId());
+			JobExecution jobExecution = jobRepository.getJobExecution(managerStepExecution.getJobExecution().getId());
 			Set<StepExecution> finishedStepExecutions = jobExecution.getStepExecutions()
 				.stream()
 				.filter(stepExecution -> partitionStepExecutionIds.contains(stepExecution.getId()))

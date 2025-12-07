@@ -1,5 +1,5 @@
 /*
- * Copyright 2006-2026 the original author or authors.
+ * Copyright 2006-present the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -188,7 +188,7 @@ public class JdbcStepExecutionDao extends AbstractJdbcBatchMetadataDao implement
 		Timestamp createTime = stepExecution.getCreateTime() == null ? null
 				: Timestamp.valueOf(stepExecution.getCreateTime());
 		Object[] parameterValues = new Object[] { stepExecution.getId(), stepExecution.getVersion(),
-				stepExecution.getStepName(), stepExecution.getJobExecutionId(), startTime, endTime,
+				stepExecution.getStepName(), stepExecution.getJobExecution().getId(), startTime, endTime,
 				stepExecution.getStatus().toString(), stepExecution.getCommitCount(), stepExecution.getReadCount(),
 				stepExecution.getFilterCount(), stepExecution.getWriteCount(),
 				stepExecution.getExitStatus().getExitCode(), exitDescription, stepExecution.getReadSkipCount(),
