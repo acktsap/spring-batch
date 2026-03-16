@@ -214,7 +214,7 @@ public ChunkTaskExecutorItemWriter<Vet> itemWriter(ChunkProcessor<Vet> chunkProc
 }
 ----
 
-The `ChunkMessageChannelItemWriter` requires a `TaskExecutor` to process chunk concurrently as well as a `ChunkProcessor`
+The `ChunkTaskExecutorItemWriter` requires a `TaskExecutor` to process chunk concurrently as well as a `ChunkProcessor`
 to define what to do with each chunk. Each thread from the task executor will receive its own chunk of items and is responsible
 for processing the chunk, and the step will manage the overall aggregation of the results.
 
