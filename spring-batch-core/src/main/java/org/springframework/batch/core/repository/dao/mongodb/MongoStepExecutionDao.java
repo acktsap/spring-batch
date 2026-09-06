@@ -36,6 +36,7 @@ import static org.springframework.data.mongodb.core.query.Query.query;
 /**
  * @author Mahmoud Ben Hassine
  * @author Yanming Zhou
+ * @author Taeik Lim
  * @since 5.2.0
  */
 public class MongoStepExecutionDao implements StepExecutionDao {
@@ -88,9 +89,8 @@ public class MongoStepExecutionDao implements StepExecutionDao {
 		this.mongoOperations.findAndReplace(query, stepExecutionToUpdate, STEP_EXECUTIONS_COLLECTION_NAME);
 	}
 
-	@Nullable
 	@Override
-	public StepExecution getStepExecution(long stepExecutionId) {
+	public @Nullable StepExecution getStepExecution(long stepExecutionId) {
 		Query query = query(where("stepExecutionId").is(stepExecutionId));
 		org.springframework.batch.core.repository.persistence.StepExecution stepExecution = this.mongoOperations
 			.findOne(query, org.springframework.batch.core.repository.persistence.StepExecution.class,
@@ -120,9 +120,8 @@ public class MongoStepExecutionDao implements StepExecutionDao {
 		// synchronizeStatus
 	}
 
-	@Nullable
 	@Override
-	public StepExecution getLastStepExecution(JobInstance jobInstance, String stepName) {
+	public @Nullable StepExecution getLastStepExecution(JobInstance jobInstance, String stepName) {
 		Query jobExecutionsQuery = query(where("jobInstanceId").is(jobInstance.getId()));
 		List<org.springframework.batch.core.repository.persistence.JobExecution> jobExecutions = this.mongoOperations
 			.find(jobExecutionsQuery, org.springframework.batch.core.repository.persistence.JobExecution.class,

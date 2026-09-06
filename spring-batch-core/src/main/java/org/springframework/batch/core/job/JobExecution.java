@@ -1,5 +1,5 @@
 /*
- * Copyright 2006-2025 the original author or authors.
+ * Copyright 2006-present the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -95,7 +95,7 @@ public class JobExecution extends Entity {
 	/**
 	 * @return The current end time.
 	 */
-	@Nullable public LocalDateTime getEndTime() {
+	public @Nullable LocalDateTime getEndTime() {
 		return endTime;
 	}
 
@@ -118,7 +118,7 @@ public class JobExecution extends Entity {
 	/**
 	 * @return The current start time.
 	 */
-	@Nullable public LocalDateTime getStartTime() {
+	public @Nullable LocalDateTime getStartTime() {
 		return startTime;
 	}
 
@@ -274,7 +274,7 @@ public class JobExecution extends Entity {
 	 * @return a {@link LocalDateTime} object representing the last time this
 	 * {@code JobExecution} was updated.
 	 */
-	@Nullable public LocalDateTime getLastUpdated() {
+	public @Nullable LocalDateTime getLastUpdated() {
 		return lastUpdated;
 	}
 

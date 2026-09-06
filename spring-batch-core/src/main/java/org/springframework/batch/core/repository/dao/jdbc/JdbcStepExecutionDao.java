@@ -1,5 +1,5 @@
 /*
- * Copyright 2006-2026 the original author or authors.
+ * Copyright 2006-present the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -61,6 +61,7 @@ import org.springframework.util.Assert;
  * @author Baris Cubukcuoglu
  * @author Minsoo Kim
  * @author Yanming Zhou
+ * @author Taeik Lim
  * @see StepExecutionDao
  */
 public class JdbcStepExecutionDao extends AbstractJdbcBatchMetadataDao implements StepExecutionDao, InitializingBean {
@@ -284,7 +285,7 @@ public class JdbcStepExecutionDao extends AbstractJdbcBatchMetadataDao implement
 	}
 
 	@Override
-	@Nullable public StepExecution getStepExecution(long stepExecutionId) {
+	public @Nullable StepExecution getStepExecution(long stepExecutionId) {
 		long jobExecutionId = getJobExecutionId(stepExecutionId);
 		JobExecution jobExecution = this.jobExecutionDao.getJobExecution(jobExecutionId);
 		return getStepExecution(jobExecution, stepExecutionId);
@@ -296,9 +297,8 @@ public class JdbcStepExecutionDao extends AbstractJdbcBatchMetadataDao implement
 	}
 
 	@Override
-	@Nullable
 	@Deprecated(since = "6.0", forRemoval = true)
-	public StepExecution getStepExecution(JobExecution jobExecution, long stepExecutionId) {
+	public @Nullable StepExecution getStepExecution(JobExecution jobExecution, long stepExecutionId) {
 		List<StepExecution> executions = getJdbcTemplate().query(getQuery(GET_STEP_EXECUTION),
 				new StepExecutionRowMapper(jobExecution), stepExecutionId);
 
@@ -326,9 +326,8 @@ public class JdbcStepExecutionDao extends AbstractJdbcBatchMetadataDao implement
 		}, stepExecution.getId());
 	}
 
-	@Nullable
 	@Override
-	public StepExecution getLastStepExecution(JobInstance jobInstance, String stepName) {
+	public @Nullable StepExecution getLastStepExecution(JobInstance jobInstance, String stepName) {
 		return getJdbcTemplate().execute(getQuery(GET_LAST_STEP_EXECUTION),
 				(PreparedStatementCallback<StepExecution>) statement -> {
 					statement.setMaxRows(1);

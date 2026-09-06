@@ -1,5 +1,5 @@
 /*
- * Copyright 2006-2025 the original author or authors.
+ * Copyright 2006-present the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,6 +42,7 @@ import org.springframework.util.StringUtils;
  * @author Robert Kasanicky
  * @author Mahmoud Ben Hassine
  * @author Yanming Zhou
+ * @author Taeik Lim
  */
 public abstract class AbstractJdbcBatchMetadataDao implements InitializingBean {
 
@@ -98,7 +99,7 @@ public abstract class AbstractJdbcBatchMetadataDao implements InitializingBean {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
-	@Nullable protected JdbcOperations getJdbcTemplate() {
+	protected @Nullable JdbcOperations getJdbcTemplate() {
 		return jdbcTemplate;
 	}
 
@@ -119,7 +120,7 @@ public abstract class AbstractJdbcBatchMetadataDao implements InitializingBean {
 		this.conversionService = conversionService;
 	}
 
-	@Nullable public ConfigurableConversionService getConversionService() {
+	public @Nullable ConfigurableConversionService getConversionService() {
 		return conversionService;
 	}
 
