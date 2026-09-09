@@ -277,8 +277,8 @@ public class StepExecution extends Entity {
 	}
 
 	/**
-	 * @deprecated use {@link #getJobExecution().getId()} instead. Scheduled for removal
-	 * in version 7.0.
+	 * @deprecated use {@link #getJobExecution} instead to get the job execution id.
+	 * Scheduled for removal in version 7.0.
 	 */
 	@Deprecated(since = "6.1", forRemoval = true)
 	public long getJobExecutionId() {
@@ -449,8 +449,8 @@ public class StepExecution extends Entity {
 	}
 
 	/**
-	 * @deprecated use {@link #getJobExecution().getJobParameters()} instead. Scheduled
-	 * for removal in version 7.0.
+	 * @deprecated use {@link #getJobExecution()} instead to get the job execution
+	 * parameters. Scheduled for removal in version 7.0.
 	 */
 	@Deprecated(since = "6.1", forRemoval = true)
 	public JobParameters getJobParameters() {
