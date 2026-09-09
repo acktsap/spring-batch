@@ -1,5 +1,5 @@
 /*
- * Copyright 2006-2025 the original author or authors.
+ * Copyright 2006-present the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,9 +41,16 @@ import java.util.stream.Collectors;
  */
 public enum DatabaseType {
 
-	DERBY("Apache Derby"), DB2("DB2"), DB2VSE("DB2VSE"), DB2ZOS("DB2ZOS"), DB2AS400("DB2AS400"),
-	HSQL("HSQL Database Engine"), SQLSERVER("Microsoft SQL Server"), MYSQL("MySQL"), ORACLE("Oracle"),
-	POSTGRES("PostgreSQL"), SYBASE("Sybase"), H2("H2"), SQLITE("SQLite"), HANA("HDB"), MARIADB("MariaDB");
+	/**
+	 * Apache Derby.
+	 * @deprecated since 6.1.0 with no replacement. Scheduled for removal in 7.0.0.
+	 */
+	@Deprecated(since = "6.1.0", forRemoval = true)
+	DERBY("Apache Derby"),
+
+	DB2("DB2"), DB2VSE("DB2VSE"), DB2ZOS("DB2ZOS"), DB2AS400("DB2AS400"), HSQL("HSQL Database Engine"),
+	SQLSERVER("Microsoft SQL Server"), MYSQL("MySQL"), ORACLE("Oracle"), POSTGRES("PostgreSQL"), SYBASE("Sybase"),
+	H2("H2"), SQLITE("SQLite"), HANA("HDB"), MARIADB("MariaDB");
 
 	private static final Map<String, DatabaseType> DATABASE_TYPES = Arrays.stream(DatabaseType.values())
 		.collect(Collectors.toMap(DatabaseType::getProductName, Function.identity()));

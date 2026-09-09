@@ -270,6 +270,10 @@ may be able to use one of the supported types, if the SQL variant is close enoug
 this, you can use the raw `JdbcJobRepositoryFactoryBean` instead of the namespace shortcut and
 use it to set the database type to the closest match.
 
+WARNING: The `derby` database type is deprecated as of Spring Batch 6.1.0 and will be
+removed in version 7.0.0. If you are currently running the job repository on Apache
+Derby, you should plan a migration to another supported database platform.
+
 [tabs]
 ====
 Java::
